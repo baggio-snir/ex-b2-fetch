@@ -8,7 +8,7 @@ function goSolve(e) {
     let vc = document.getElementById('v_c').value;
     fetch(`resolve.php?a=${va}&b=${vb}&c=${vc}`)
         .then(r => r.json())
-        .then(d => displayResults)
+        .then(d => { displayResults(d); });
     e.preventDefault();
     return false;
 }
